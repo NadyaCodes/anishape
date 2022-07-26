@@ -13,7 +13,9 @@ export default function Shape(props) {
         <div className={animation.grow && 'grow'}>
           <div className={animation.bounce && 'bounce'}>
             <div className={animation.skew && 'skew'}>
-              <section id='hero-shape' className={`giant-shape ${color ? color : ''}`}>{doc.firstChild.innerHTML}</section>
+              <div className={animation.flip && 'flip'}>
+                <section id='hero-shape' className={`giant-shape ${color ? color : ''}`}>{doc.firstChild.innerHTML}</section>
+              </div>
             </div>
           </div>
         </div>

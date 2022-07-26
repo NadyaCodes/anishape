@@ -12,7 +12,7 @@ function App() {
     shape: '',
     color: '',
     theme: '',
-    animation: { spin: false, grow: false, bounce: false, skew: false},
+    animation: { spin: false, grow: false, bounce: false, skew: false, flip: false},
   })
 
   const shapeArray=['&#xa7;', '&#x2600;', '&#x2605;', '&#x2602;', '&#x2603;', '&#x2601;', '&#x2618;', '&#x263B;', '&#x266C;', '&#x273F;', '&#x2739;', '&#x2745;']
@@ -42,7 +42,7 @@ function App() {
       shape: '',
       color: '',
       theme: '',
-      animation: { spin: false, grow: false, bounce: false, skew: false}
+      animation: { spin: false, grow: false, bounce: false, skew: false, flip: false}
     })
   }
 
