@@ -15,3 +15,23 @@ $red-dark: #c70101;
 
 $orange-light: #fae5d1fe;
 $orange-dark: #e46e00fe;
+
+:export {
+  yellowLight: $yellow-light;
+  yellowDark: $yellow-dark;
+
+  greenLight: $green-light;
+  greenDark: $green-dark;
+
+  blueLight: $blue-light;
+  blueDark: $blue-dark;
+
+  purpleLight: $purple-light;
+  purpleDark: $purple-dark;
+
+  redLight: $red-light;
+  redDark: $red-dark;
+
+  orangeLight: $orange-light;
+  orangeDark: $orange-dark;
+}

@@ -1,7 +1,17 @@
+import colors from './styles/_colors.scss'
+
 export default function ColorPicker(props) {
   const pickColor = () => {
     props.setState((prev) => ({...prev, color: props.color}))
   }
 
-  return(<button className='color-picker' onClick={() => pickColor()}>{props.color}</button>)
+  const colorString = `${props.color}Dark`
+
+
+  const CSS = {
+    backgroundColor: colors[colorString]
+  }
+
+
+  return(<button className='color-picker' onClick={() => pickColor()} style={CSS}></button>)
 }

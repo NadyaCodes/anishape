@@ -1,9 +1,15 @@
+import colors from './styles/_colors.scss'
+
 export default function ThemePicker(props) {
   const pickTheme = () => {
     props.setState((prev) => ({...prev, theme: props.color}))
   }
 
+  const colorString = `${props.color}Light`
 
+  const CSS ={
+    backgroundColor: colors[colorString]
+  }
 
-  return(<button className='theme-picker' onClick={() => pickTheme()}>{props.color}</button>)
+  return(<button className='color-picker' onClick={() => pickTheme()} style={CSS}></button>)
 }
