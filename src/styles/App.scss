@@ -10,6 +10,19 @@ h1 {
   padding: 1.3rem;
 }
 
+button {
+  background-color: transparent;
+  border: .1rem solid black;
+  border-radius: .4rem;
+  margin: .3rem;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+  // border: .1rem solid black;
+}
+
 .App-header {
   height: 10rem;
 }
@@ -149,6 +162,28 @@ h1 {
     }
     100% {
       transform:translateY(0rem)
+    }
+  }
+}
+
+.skew {
+  animation: linear infinite 2s skewing;
+  @keyframes skewing {
+    0% {
+      transform:skew(0deg, 0deg)
+    }
+    25% {
+      transform:skew(-10deg, -30deg)
+    }
+    50% {
+      transform:skew(0deg, 0deg)
+    }
+
+    75% {
+      transform:skew(10deg, 30deg)
+    }
+    100% {
+      transform:skew(0deg)
     }
   }
 }

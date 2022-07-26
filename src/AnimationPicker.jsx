@@ -1,5 +1,8 @@
+import {useState} from 'react'
+
 export default function AnimationPicker(props) {
   const {singleAnimation, state, setState} = props
+  const [selected, setSelected] = useState(false)
 
   const toggleAnimation = () => {
 
@@ -7,10 +10,10 @@ export default function AnimationPicker(props) {
       setState((prev) => ({...prev, animation: {...prev.animation, [singleAnimation]: false}})) 
       : setState((prev) => ({...prev, animation: {...prev.animation, [singleAnimation]: true}}))
     
-      let animationToToggle = document.getElementById("heroShape").style
-      console.log("animationToToggle", animationToToggle)
+
+    selected === true ? setSelected(false) : setSelected(true)
 
   }
 
-  return(<button onClick={() => toggleAnimation()}>{props.singleAnimation}</button>)
+  return(<button onClick={() => toggleAnimation()} className={selected ? 'selected' : ''}>{props.singleAnimation}</button>)
 }
