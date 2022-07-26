@@ -5,19 +5,17 @@ export default function Shape(props) {
 
   let themeString = theme + '-theme'
 
-  const animationArray = []
-  Object.entries(animation).forEach(([key, value]) => {
-    if (value === true) {
-      animationArray.push(key)
-    }
-  })
-
-  const animationString = animationArray.join(' ')
   themeString += ' hero-shape-container'
 
   return(
     <div className={theme ? themeString : 'hero-shape-container'}>
-      <section id='heroShape' className={`giant-shape ${color ? color : ''} ${animation ? animationString : ''}`}>{doc.firstChild.innerHTML}</section>
+      <div className={animation.spin && 'spin'}>
+        <div className={animation.grow && 'grow'}>
+          <div className={animation.bounce && 'bounce'}>
+            <section id='heroShape' className={`giant-shape ${color ? color : ''}`}>{doc.firstChild.innerHTML}</section>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -80,7 +80,7 @@ button {
 }
 
 .hero-shape-container {
-  height: 30rem;
+  height: 40rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,28 +91,40 @@ button {
   background-color: transparent;
 }
 
-// <single-animation> = <time> || <easing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ]
 
 .spin {
-  // animation: linear infinite 3s spinning;
-  // color: fuchsia;
   animation: spinning 3s linear infinite;
-  animation-play-state: running;
-
   @keyframes spinning {
-    from {
-        transform:rotate(0deg);
-    }
     to  {
         transform:rotate(360deg);
     }
-    }
+  }
 }
 
+
+
 .grow {
-  // animation: linear infinite 3s spinning;
-  color: teal
+  animation: linear infinite 2s growing;
+  @keyframes growing {
+    0% {
+      transform:scale(100%)
+    }
+    25% {
+      transform:scale(120%)
+    }
+    50% {
+      transform:scale(140%)
+    }
+    75% {
+      transform:scale(120%)
+    }
+    100% {
+      transform:scale(100%)
+    }
+  }
 }
+
+
 
 
 .bounce {
