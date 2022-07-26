@@ -57,7 +57,7 @@ function App() {
         <div className='color-container'>Color: {!state.color ? colorOptions : '✅'}</div>
         <div className='theme-container'>Theme: {!state.theme ? themeOptions : '✅'}</div>
         
-        {state.shape && state.color && state.theme && animationOptions}
+        <div className='animation-options-container'>{state.shape && state.color && state.theme && animationOptions}</div>
         {state.shape && <Shape shape={state.shape} color={state.color} theme={state.theme} animation={state.animation}/>}
         
       </main>
