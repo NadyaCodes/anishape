@@ -89,6 +89,7 @@ button {
 .giant-shape {
   font-size: 20rem;
   background-color: transparent;
+  z-index: -1;
 }
 
 
@@ -100,7 +101,6 @@ button {
     }
   }
 }
-
 
 
 .grow {
@@ -125,18 +125,24 @@ button {
 }
 
 
-
-
 .bounce {
-  // animation: linear infinite 3s spinning;
-  color: turquoise
-}
+  animation: linear infinite 2s bouncing;
+  @keyframes bouncing {
+    0% {
+      transform:translate(0rem, 0rem)
+    }
+    25% {
+      transform:translate(-10rem, -30rem)
+    }
+    50% {
+      transform:translate(0rem, 0rem)
+    }
 
-// @keyframes spinning {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+    75% {
+      transform:translate(10rem, -30rem)
+    }
+    100% {
+      transform:translateY(0rem)
+    }
+  }
+}
