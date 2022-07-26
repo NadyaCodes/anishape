@@ -1,0 +1,130 @@
+@use './colors.scss' as *;
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  transform: skew(10deg, 10deg);
+  font-size: 5rem;
+  padding: 1.3rem;
+}
+
+button {
+  z-index: 5;
+}
+
+.App-header {
+  height: 10rem;
+}
+
+.yellow {
+  color: $yellow-dark;
+}
+
+.yellow-theme {
+  background-color: $yellow-light;
+}
+
+.green {
+  color: $green-dark;
+}
+
+.green-theme {
+  background-color: $green-light;
+}
+
+.blue {
+  color: $blue-dark;
+}
+
+.blue-theme {
+  background-color: $blue-light;
+}
+
+.purple {
+  color: $purple-dark;
+}
+
+.purple-theme {
+  background-color: $purple-light;
+}
+
+.red {
+  color: $red-dark;
+}
+
+.red-theme {
+  background-color: $red-light;
+}
+
+.orange {
+  color: $orange-dark;
+}
+
+.orange-theme {
+  background-color: $orange-light;
+}
+
+.shape-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape {
+  font-size: 3rem;
+  margin: .3rem;
+  height: 5rem;
+  min-width: 4rem;
+}
+
+.hero-shape-container {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giant-shape {
+  font-size: 20rem;
+  background-color: transparent;
+}
+
+// <single-animation> = <time> || <easing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ]
+
+.spin {
+  // animation: linear infinite 3s spinning;
+  // color: fuchsia;
+  animation: spinning 3s linear infinite;
+  animation-play-state: running;
+
+  @keyframes spinning {
+    from {
+        transform:rotate(0deg);
+    }
+    to  {
+        transform:rotate(360deg);
+    }
+    }
+}
+
+.grow {
+  // animation: linear infinite 3s spinning;
+  color: teal
+}
+
+
+.bounce {
+  // animation: linear infinite 3s spinning;
+  color: turquoise
+}
+
+// @keyframes spinning {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
