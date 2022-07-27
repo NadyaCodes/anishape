@@ -60,10 +60,6 @@ button {
   100%{ transform: translateY(0em);}
 }
 
-.selected {
-  background-color: black;
-  color: white;
-}
 
 .App-header {
   height: 10rem;
@@ -159,6 +155,13 @@ div.animation-options-container > div > button {
   border: .1rem double darken($color-4-dark, 15%);
   font-size: 1.2rem;
 }
+
+div.animation-options-container > div > button.selected {
+  color: lighten($color-4-light, 6%);
+  border: .1rem double lighten($color-4-light, 6%);
+  background-color: darken($color-4-dark, 15%);
+}
+
 
 #hero-shape {
   z-index: 1;
