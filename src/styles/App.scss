@@ -167,6 +167,10 @@ button {
 .animation-options-container {
   z-index: 5;
   position: relative;
+  border: 1.5rem double $color-4-dark;
+  padding: 1.3rem;
+  margin: 1.3rem auto;
+  width: 50vw;
 }
 
 div.animation-options-container > div > button {
