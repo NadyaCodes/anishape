@@ -130,19 +130,16 @@ button {
 }
 
 .reset {
-  background-color: $color-3-light;
-  color: $color-3-dark;
+  background-color: $color-6-light;
+  color: $color-6-dark;
   font-size: 1.3rem;
-  border: .3rem double $color-3-dark;
+  border: .3rem double $color-6-dark;
   &:hover {
-    background-color: $color-3-dark;
-    color: $color-3-light;
-    border-color: $color-3-light;
+    background-color: $color-6-dark;
+    color: $color-6-light;
+    border-color: $color-6-light;
   }
 }
-
-
-
 
 .shape {
   font-size: 3rem;
@@ -154,6 +151,13 @@ button {
 .animation-options-container {
   z-index: 5;
   position: relative;
+}
+
+div.animation-options-container > div > button {
+  background-color: lighten($color-4-light, 6%);
+  color: darken($color-4-dark, 15%);
+  border: .1rem double darken($color-4-dark, 15%);
+  font-size: 1.2rem;
 }
 
 #hero-shape {
