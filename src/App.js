@@ -144,9 +144,9 @@ function App() {
           Pick Your Theme: {!state.theme ? themeOptions : checkmark}
         </div>
 
-        <div className="animation-options-container">
+        <div>
           {state.shape && state.color && state.theme && (
-            <div>
+            <div  className="animation-options-container">
               <span>What do you want to do? </span>
               {animationOptions}
             </div>
