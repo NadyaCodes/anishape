@@ -5,7 +5,7 @@ export default function ThemePicker(props) {
     props.setState((prev) => ({...prev, theme: props.color}))
   }
 
-  const colorString = `${props.color}Light`
+  const colorString = `${props.color}light`
 
   const CSS ={
     backgroundColor: colors[colorString]

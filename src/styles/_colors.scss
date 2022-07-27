@@ -1,37 +1,37 @@
-$yellow-light: #f8f5e0;
-$yellow-dark: #f5dc00;
+$color-1-light: #85fad8;
+$color-1-dark: #053225;
 
-$green-light: #d5faea;
-$green-dark: #04804a;
+$color-2-light: #ffc6cb;
+$color-2-dark: #E63946;
 
-$blue-light: #b9d2f5;
-$blue-dark: #0556c7;
+$color-3-light: #fa92de;
+$color-3-dark: #72195A;
 
-$purple-light: #ead7f8;
-$purple-dark: #590099;
+$color-4-light: #bbe9ff;
+$color-4-dark: #217094;
 
-$red-light: #fadcdc;
-$red-dark: #c70101;
+$color-5-light: #a8c5ff;
+$color-5-dark: #07348d;
 
-$orange-light: #fae5d1fe;
-$orange-dark: #e46e00fe;
+$color-6-light: #99fff0;
+$color-6-dark: #007765;
 
 :export {
-  yellowLight: $yellow-light;
-  yellowDark: $yellow-dark;
+  color1light: $color-1-light;
+  color1dark: $color-1-dark;
 
-  greenLight: $green-light;
-  greenDark: $green-dark;
+  color2light: $color-2-light;
+  color2dark: $color-2-dark;
 
-  blueLight: $blue-light;
-  blueDark: $blue-dark;
+  color3light: $color-3-light;
+  color3dark: $color-3-dark;
 
-  purpleLight: $purple-light;
-  purpleDark: $purple-dark;
+  color4light: $color-4-light;
+  color4dark: $color-4-dark;
 
-  redLight: $red-light;
-  redDark: $red-dark;
+  color5light: $color-5-light;
+  color5dark: $color-5-dark;
 
-  orangeLight: $orange-light;
-  orangeDark: $orange-dark;
+  color6light: $color-6-light;
+  color6dark: $color-6-dark;
 }

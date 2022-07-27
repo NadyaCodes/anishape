@@ -5,7 +5,7 @@ export default function ColorPicker(props) {
     props.setState((prev) => ({...prev, color: props.color}))
   }
 
-  const colorString = `${props.color}Dark`
+  const colorString = `${props.color}dark`
 
 
   const CSS = {

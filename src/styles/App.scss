@@ -1,8 +1,23 @@
+
+
 @use './colors.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .App {
   text-align: center;
 }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
 
 h1 {
   transform: skew(10deg, 10deg);
@@ -10,69 +25,96 @@ h1 {
   padding: 1.3rem;
 }
 
+
+
 button {
   background-color: transparent;
   border: .1rem solid black;
   border-radius: .4rem;
   margin: .3rem;
+  &:hover{
+    box-shadow: -5px 5px gray;
+    transform: translate(.2rem, -.2rem);
+  }
+}
+
+.wave-animation span {
+  display: inline-block;
+  animation: wave 1.3s ease-in-out infinite;
+}
+
+.wave-animation {
+  span:nth-of-type(1){animation-delay: 0.0s;}
+  span:nth-of-type(2){animation-delay: 0.1s;}
+  span:nth-of-type(3){animation-delay: 0.2s;}
+  span:nth-of-type(4){animation-delay: 0.3s;}
+  span:nth-of-type(5){animation-delay: 0.4s;}
+  span:nth-of-type(6){animation-delay: 0.5s;}
+  span:nth-of-type(7){animation-delay: 0.6s;}
+  span:nth-of-type(8){animation-delay: 0.7s;}
+}
+
+@keyframes wave {
+  0%{ transform: translateY(0em);}
+  60%{ transform: translateY(-0.6em); transform: scale(10%); }
+  100%{ transform: translateY(0em);}
 }
 
 .selected {
   background-color: black;
   color: white;
-  // border: .1rem solid black;
 }
 
 .App-header {
   height: 10rem;
 }
 
-.yellow {
-  color: $yellow-dark;
+.color1 {
+  color: $color-1-dark;
 }
 
-.yellow-theme {
-  background-color: $yellow-light;
+.color1-theme {
+  background-color: $color-1-light;
 }
 
-.green {
-  color: $green-dark;
+.color2 {
+  color: $color-2-dark;
 }
 
-.green-theme {
-  background-color: $green-light;
+.color2-theme {
+  background-color: $color-2-light;
 }
 
-.blue {
-  color: $blue-dark;
+.color3 {
+  color: $color-3-dark;
 }
 
-.blue-theme {
-  background-color: $blue-light;
+.color3-theme {
+  background-color: $color-3-light;
 }
 
-.purple {
-  color: $purple-dark;
+.color4 {
+  color: $color-4-dark;
 }
 
-.purple-theme {
-  background-color: $purple-light;
+.color4-theme {
+  background-color: $color-4-light;
 }
 
-.red {
-  color: $red-dark;
+.color5 {
+  color: $color-5-dark;
 }
 
-.red-theme {
-  background-color: $red-light;
+.color5-theme {
+  background-color: $color-5-light;
 }
 
-.orange {
-  color: $orange-dark;
+.color6 {
+  color: $color-6-dark;
 }
 
-.orange-theme {
-  background-color: $orange-light;
+.color6-theme {
+  background-color: $color-6-light;
 }
 
 .color-picker {
@@ -80,11 +122,27 @@ button {
   width: 5rem;
 }
 
-.shape-container {
+.shape-container, .color-container, .theme-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: .2rem;
 }
+
+.reset {
+  background-color: $color-3-light;
+  color: $color-3-dark;
+  font-size: 1.3rem;
+  border: .3rem double $color-3-dark;
+  &:hover {
+    background-color: $color-3-dark;
+    color: $color-3-light;
+    border-color: $color-3-light;
+  }
+}
+
+
+
 
 .shape {
   font-size: 3rem;
