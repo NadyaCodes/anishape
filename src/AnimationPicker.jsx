@@ -21,7 +21,7 @@ export default function AnimationPicker(props) {
   return (
     <button
       onClick={() => toggleAnimation()}
-      className={selected ? "selected" : ""}
+      className={selected ? "selected animation-button" : "animation-button"}
     >
       {props.singleAnimation}
     </button>

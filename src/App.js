@@ -106,6 +106,7 @@ function App() {
         flip: false,
       },
     });
+    setHeader("title-container");
   };
 
   useEffect(() => {
@@ -118,7 +119,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+
+      <main>
+
+        {!state.shape | !state.color | !state.theme ? 
+        <>
+              <div className="App-header">
         <h1 className={header}>
           <span>a</span>
           <span>n</span>
@@ -129,11 +135,7 @@ function App() {
           <span>p</span>
           <span>e</span>
         </h1>
-      </header>
-      <main>
-        <button className="reset" onClick={() => resetAll()}>
-          Reset
-        </button>
+      </div>
         <div className="shape-container">
           Pick Your Shape: {!state.shape ? shapeOptions : checkmark}
         </div>
@@ -143,8 +145,13 @@ function App() {
         <div className="theme-container">
           Pick Your Theme: {!state.theme ? themeOptions : checkmark}
         </div>
+        </> : <></>
+        }
 
         <div>
+        <button className="reset" onClick={() => resetAll()}>
+          Reset
+        </button>
           {state.shape && state.color && state.theme && (
             <div  className="animation-options-container">
               <span>What do you want to do? </span>

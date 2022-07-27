@@ -12,11 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// code {
-//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//     monospace;
-// }
-
 h1 {
   transform: skew(10deg, 10deg);
   font-size: 5rem;
@@ -29,8 +24,9 @@ button {
   border-radius: 0.4rem;
   margin: 0.3rem;
   &:hover {
-    box-shadow: -5px 5px gray;
-    transform: translate(0.2rem, -0.2rem);
+    box-shadow: -3px 3px 5px 1px $color-6-dark;
+    transform: translate(0.2rem, -0.2rem) scale(110%);
+    background-color: $color-1-light;
   }
 }
 
@@ -71,8 +67,7 @@ button {
     transform: translateY(0em);
   }
   60% {
-    transform: translateY(-0.6em);
-    transform: scale(10%);
+    transform: translateY(-0.6em) scale(10%);
   }
   100% {
     transform: translateY(0em);
@@ -146,14 +141,14 @@ button {
 }
 
 .reset {
-  background-color: $color-6-light;
-  color: $color-6-dark;
+  background-color: $color-1-light;
+  color: $color-1-dark;
   font-size: 1.3rem;
-  border: 0.3rem double $color-6-dark;
+  border: 0.1rem solid $color-1-dark;
   &:hover {
-    background-color: $color-6-dark;
-    color: $color-6-light;
-    border-color: $color-6-light;
+    background-color: $color-1-dark;
+    color: $color-1-light;
+    border-color: $color-1-light;
   }
 }
 
@@ -167,23 +162,28 @@ button {
 .animation-options-container {
   z-index: 5;
   position: relative;
-  border: 1.5rem double $color-4-dark;
-  padding: 1.3rem;
+  border-bottom: .5rem double $color-4-dark;
+  border-radius: 2rem;
+  padding: .3rem;
   margin: 1.3rem auto;
   width: 50vw;
 }
 
-div.animation-options-container > div > button {
-  background-color: lighten($color-4-light, 6%);
+.animation-button {
+  background-color: $color-4-light;
   color: darken($color-4-dark, 15%);
-  border: 0.1rem double darken($color-4-dark, 15%);
+  border: 0.1rem solid darken($color-4-dark, 15%);
   font-size: 1.2rem;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $color-2-light;
+  }
 }
 
-div.animation-options-container > div > button.selected {
+.animation-button.selected {
   color: lighten($color-4-light, 6%);
   border: 0.1rem double lighten($color-4-light, 6%);
-  background-color: darken($color-4-dark, 15%);
+  background-color: $color-4-dark;
 }
 
 #hero-shape {
@@ -192,7 +192,7 @@ div.animation-options-container > div > button.selected {
 }
 
 .hero-shape-container {
-  height: 30rem;
+  height: 40rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,14 +241,14 @@ div.animation-options-container > div > button.selected {
       transform: translate(0rem, 0rem);
     }
     25% {
-      transform: translate(-10rem, -30rem);
+      transform: translate(-8rem, -10rem);
     }
     50% {
       transform: translate(0rem, 0rem);
     }
 
     75% {
-      transform: translate(10rem, -30rem);
+      transform: translate(8rem, -10rem);
     }
     100% {
       transform: translateY(0rem);
