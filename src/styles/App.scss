@@ -1,7 +1,5 @@
-
-
-@use './colors.scss' as *;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@use "./colors.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 .App {
   text-align: center;
@@ -9,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,16 +23,14 @@ h1 {
   padding: 1.3rem;
 }
 
-
-
 button {
   background-color: transparent;
-  border: .1rem solid black;
-  border-radius: .4rem;
-  margin: .3rem;
-  &:hover{
+  border: 0.1rem solid black;
+  border-radius: 0.4rem;
+  margin: 0.3rem;
+  &:hover {
     box-shadow: -5px 5px gray;
-    transform: translate(.2rem, -.2rem);
+    transform: translate(0.2rem, -0.2rem);
   }
 }
 
@@ -44,22 +40,44 @@ button {
 }
 
 .wave-animation {
-  span:nth-of-type(1){animation-delay: 0.0s;}
-  span:nth-of-type(2){animation-delay: 0.1s;}
-  span:nth-of-type(3){animation-delay: 0.2s;}
-  span:nth-of-type(4){animation-delay: 0.3s;}
-  span:nth-of-type(5){animation-delay: 0.4s;}
-  span:nth-of-type(6){animation-delay: 0.5s;}
-  span:nth-of-type(7){animation-delay: 0.6s;}
-  span:nth-of-type(8){animation-delay: 0.7s;}
+  span:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  span:nth-of-type(2) {
+    animation-delay: 0.1s;
+  }
+  span:nth-of-type(3) {
+    animation-delay: 0.2s;
+  }
+  span:nth-of-type(4) {
+    animation-delay: 0.3s;
+  }
+  span:nth-of-type(5) {
+    animation-delay: 0.4s;
+  }
+  span:nth-of-type(6) {
+    animation-delay: 0.5s;
+  }
+  span:nth-of-type(7) {
+    animation-delay: 0.6s;
+  }
+  span:nth-of-type(8) {
+    animation-delay: 0.7s;
+  }
 }
 
 @keyframes wave {
-  0%{ transform: translateY(0em);}
-  60%{ transform: translateY(-0.6em); transform: scale(10%); }
-  100%{ transform: translateY(0em);}
+  0% {
+    transform: translateY(0em);
+  }
+  60% {
+    transform: translateY(-0.6em);
+    transform: scale(10%);
+  }
+  100% {
+    transform: translateY(0em);
+  }
 }
-
 
 .App-header {
   height: 10rem;
@@ -118,18 +136,20 @@ button {
   width: 5rem;
 }
 
-.shape-container, .color-container, .theme-container {
+.shape-container,
+.color-container,
+.theme-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: .2rem;
+  margin: 0.2rem;
 }
 
 .reset {
   background-color: $color-6-light;
   color: $color-6-dark;
   font-size: 1.3rem;
-  border: .3rem double $color-6-dark;
+  border: 0.3rem double $color-6-dark;
   &:hover {
     background-color: $color-6-dark;
     color: $color-6-light;
@@ -139,7 +159,7 @@ button {
 
 .shape {
   font-size: 3rem;
-  margin: .3rem;
+  margin: 0.3rem;
   height: 5rem;
   min-width: 4rem;
 }
@@ -152,16 +172,15 @@ button {
 div.animation-options-container > div > button {
   background-color: lighten($color-4-light, 6%);
   color: darken($color-4-dark, 15%);
-  border: .1rem double darken($color-4-dark, 15%);
+  border: 0.1rem double darken($color-4-dark, 15%);
   font-size: 1.2rem;
 }
 
 div.animation-options-container > div > button.selected {
   color: lighten($color-4-light, 6%);
-  border: .1rem double lighten($color-4-light, 6%);
+  border: 0.1rem double lighten($color-4-light, 6%);
   background-color: darken($color-4-dark, 15%);
 }
-
 
 #hero-shape {
   z-index: 1;
@@ -181,57 +200,54 @@ div.animation-options-container > div > button.selected {
   z-index: -1;
 }
 
-
 .spin {
   animation: spinning 3s linear infinite;
   @keyframes spinning {
-    to  {
-        transform:rotate(360deg);
+    to {
+      transform: rotate(360deg);
     }
   }
 }
-
 
 .grow {
   animation: linear infinite 2s growing;
   @keyframes growing {
     0% {
-      transform:scale(100%)
+      transform: scale(100%);
     }
     25% {
-      transform:scale(140%)
+      transform: scale(140%);
     }
     50% {
-      transform:scale(180%)
+      transform: scale(180%);
     }
     75% {
-      transform:scale(140%)
+      transform: scale(140%);
     }
     100% {
-      transform:scale(100%)
+      transform: scale(100%);
     }
   }
 }
-
 
 .bounce {
   animation: linear infinite 2s bouncing;
   @keyframes bouncing {
     0% {
-      transform:translate(0rem, 0rem)
+      transform: translate(0rem, 0rem);
     }
     25% {
-      transform:translate(-10rem, -30rem)
+      transform: translate(-10rem, -30rem);
     }
     50% {
-      transform:translate(0rem, 0rem)
+      transform: translate(0rem, 0rem);
     }
 
     75% {
-      transform:translate(10rem, -30rem)
+      transform: translate(10rem, -30rem);
     }
     100% {
-      transform:translateY(0rem)
+      transform: translateY(0rem);
     }
   }
 }
@@ -240,20 +256,20 @@ div.animation-options-container > div > button.selected {
   animation: linear infinite 2s skewing;
   @keyframes skewing {
     0% {
-      transform:skew(0deg, 0deg)
+      transform: skew(0deg, 0deg);
     }
     25% {
-      transform:skew(-10deg, -30deg)
+      transform: skew(-10deg, -30deg);
     }
     50% {
-      transform:skew(0deg, 0deg)
+      transform: skew(0deg, 0deg);
     }
 
     75% {
-      transform:skew(10deg, 30deg)
+      transform: skew(10deg, 30deg);
     }
     100% {
-      transform:skew(0deg)
+      transform: skew(0deg);
     }
   }
 }
@@ -272,5 +288,3 @@ div.animation-options-container > div > button.selected {
     }
   }
 }
-
-
