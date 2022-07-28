@@ -27,9 +27,13 @@ This project has been deployed to the following url: https://anishape.netlify.ap
 ## Run Locally
 To run locally, clone the repo and install the dependencies.
 
-<br>
-<br>
-
-## Dependencies include:
+### Dependencies include:
  * React
  * Sass
+
+ ## Screenshots
+
+ ![aniShape Screenshot 1](https://github.com/NadyaCodes/anishape/blob/e561e0514e52669837180c7fa461b48c1032313c/docs/aniShape-screenshot-1.png?raw=true)
+
+ ![aniShape Screenshot 2](https://github.com/NadyaCodes/anishape/blob/e561e0514e52669837180c7fa461b48c1032313c/docs/aniShape-screenshot-2.png?raw=true)
+ ![aniShape Screenshot 3](https://github.com/NadyaCodes/anishape/blob/e561e0514e52669837180c7fa461b48c1032313c/docs/aniShape-screenshot-3.png?raw=true)
