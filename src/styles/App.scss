@@ -3,7 +3,10 @@
 
 .App {
   text-align: center;
-  
+}
+
+head {
+  height: 10rem;
 }
 
 body {
@@ -11,7 +14,12 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right, $color-4-light, $color-6-light, $color-2-light);
+  background-image: linear-gradient(
+    to bottom right,
+    $color-4-light,
+    $color-6-light,
+    $color-2-light
+  );
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -22,7 +30,7 @@ h1 {
   padding: 1.3rem;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 4rem;
   }
@@ -40,8 +48,6 @@ button {
     background-color: $color-4-light;
   }
 }
-
-
 
 .wave-animation span {
   display: inline-block;
@@ -87,10 +93,6 @@ button {
   100% {
     transform: translateY(0em);
   }
-}
-
-.App-header {
-  height: 10rem;
 }
 
 .color1 {
@@ -162,12 +164,11 @@ button {
   justify-content: center;
   align-items: center;
   margin: 0.2rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-
-
-.shape-preview, .question {
+.shape-preview,
+.question {
   font-size: 20rem;
   height: 20rem;
   margin-top: -4rem;
@@ -191,7 +192,6 @@ button {
   }
 }
 
-
 div.pre-shape > div > div {
   height: 25rem;
   margin-top: 0rem;
@@ -211,15 +211,15 @@ div.pre-shape > div > div {
   margin: 0.3rem;
   height: 5rem;
   min-width: 4rem;
-  content: '\25B8';
+  content: "\25B8";
 }
 
 .animation-options-container {
   z-index: 5;
   position: relative;
-  border-bottom: .5rem double $color-4-dark;
+  border-bottom: 0.5rem double $color-4-dark;
   border-radius: 2rem;
-  padding: .6rem;
+  padding: 0.6rem;
   margin: 1.3rem auto;
   width: 50vw;
 }
