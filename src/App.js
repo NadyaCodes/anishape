@@ -24,18 +24,18 @@ function App() {
   const [header, setHeader] = useState("title-container");
 
   const shapeArray = [
-    "&#xa7;",
-    "&#x2600;",
-    "&#x2605;",
-    "&#x2602;",
-    "&#x2603;",
-    "&#x2601;",
-    "&#x2618;",
-    "&#x263B;",
-    "&#x266C;",
-    "&#x273F;",
-    "&#x2739;",
-    "&#x2745;",
+    "&#xa7;&#xFE0E;",
+    "&#x2600;&#xFE0E;",
+    "&#x2605;&#xFE0E;",
+    "&#x2602;&#xFE0E;",
+    "&#x2603;&#xFE0E;",
+    "&#x2601;&#xFE0E;",
+    "&#x2618;&#xFE0E;",
+    "&#x263B;&#xFE0E;",
+    "&#x266C;&#xFE0E;",
+    "&#x273F;&#xFE0E;",
+    "&#x2739;&#xFE0E;",
+    "&#x2745;&#xFE0E;",
   ];
 
   const shapeOptions = shapeArray.map((shape, index) => {
