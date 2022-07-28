@@ -136,14 +136,25 @@ function App() {
           <span>e</span>
         </h1>
       </div>
+      <div className="pre-shape">
+      {state.shape ? (<div className="shape-preview">
+                      <Shape
+                        shape={state.shape}
+                        color={state.color}
+                        theme={state.theme}
+                        animation={state.animation}
+                      />
+                      </div>
+                    ) : <div className="question">?</div>} 
+      </div>
         <div className="shape-container">
-          Pick Your Shape: {!state.shape ? shapeOptions : checkmark}
+          <div>Pick Your Shape: &nbsp;</div> <div>{!state.shape ? shapeOptions : checkmark}</div>
         </div>
         <div className="color-container">
-          Pick Your Color: {!state.color ? colorOptions : checkmark}
+          <div>Pick Your Color: &nbsp; </div><div>{!state.color ? colorOptions : checkmark}</div>
         </div>
         <div className="theme-container">
-          Pick Your Theme: {!state.theme ? themeOptions : checkmark}
+          <div>Pick Your Theme: &nbsp;</div><div> {!state.theme ? themeOptions : checkmark}</div>
         </div>
         </> : <></>
         }
@@ -153,20 +164,34 @@ function App() {
           Reset
         </button>
           {state.shape && state.color && state.theme && (
+            <div>
             <div  className="animation-options-container">
-              <span>What do you want to do? </span>
+              <div>What do you want to do? </div>
+              <div>
               {animationOptions}
+              </div>
             </div>
+            <div>
+                    {state.shape && (
+                      <Shape
+                        shape={state.shape}
+                        color={state.color}
+                        theme={state.theme}
+                        animation={state.animation}
+                      />
+                    )}
+                    </div>
+                    </div>
           )}
         </div>
-        {state.shape && (
+        {/* {state.shape && (
           <Shape
             shape={state.shape}
             color={state.color}
             theme={state.theme}
             animation={state.animation}
           />
-        )}
+        )} */}
       </main>
     </div>
   );

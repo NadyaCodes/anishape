@@ -3,6 +3,7 @@
 
 .App {
   text-align: center;
+  
 }
 
 body {
@@ -10,6 +11,9 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom right, $color-4-light, $color-6-light, $color-2-light);
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 h1 {
@@ -19,14 +23,15 @@ h1 {
 }
 
 button {
-  background-color: transparent;
+  background-color: lighten($color-4-light, 5%);
   border: 0.1rem solid black;
   border-radius: 0.4rem;
   margin: 0.3rem;
+  z-index: 2;
   &:hover {
-    box-shadow: -3px 3px 5px 1px $color-6-dark;
+    box-shadow: -3px 3px 5px 1px $color-4-dark;
     transform: translate(0.2rem, -0.2rem) scale(110%);
-    background-color: $color-1-light;
+    background-color: $color-4-light;
   }
 }
 
@@ -36,6 +41,8 @@ button {
 }
 
 .wave-animation {
+  z-index: 1;
+  position: relative;
   span:nth-of-type(1) {
     animation-delay: 0s;
   }
@@ -131,24 +138,63 @@ button {
   width: 5rem;
 }
 
+.pre-shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 10vw;
+  // height: 10vw;
+}
+
 .shape-container,
 .color-container,
 .theme-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0.2rem;
+  padding: .5rem;
+}
+
+
+
+.shape-preview, .question {
+  font-size: 20rem;
+  height: 20rem;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
+}
+
+.question {
+  animation: fade-in 5s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+  }
+  to {
+    opacity: 100%;
+    transform: rotate(0deg);
+    // transform-origin: 20% 40%;
+  }
+}
+
+
+div.pre-shape > div > div {
+  height: 25rem;
+  margin-top: 0rem;
 }
 
 .reset {
-  background-color: $color-1-light;
-  color: $color-1-dark;
   font-size: 1.3rem;
-  border: 0.1rem solid $color-1-dark;
+  border: 0.1rem solid $color-2-dark;
+  margin: 1rem;
   &:hover {
-    background-color: $color-1-dark;
-    color: $color-1-light;
-    border-color: $color-1-light;
+    background-color: $color-2-dark;
   }
 }
 
@@ -164,20 +210,14 @@ button {
   position: relative;
   border-bottom: .5rem double $color-4-dark;
   border-radius: 2rem;
-  padding: .3rem;
+  padding: .6rem;
   margin: 1.3rem auto;
   width: 50vw;
 }
 
 .animation-button {
-  background-color: $color-4-light;
-  color: darken($color-4-dark, 15%);
-  border: 0.1rem solid darken($color-4-dark, 15%);
   font-size: 1.2rem;
   text-transform: uppercase;
-  &:hover {
-    background-color: $color-2-light;
-  }
 }
 
 .animation-button.selected {
